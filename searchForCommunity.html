@@ -1,0 +1,186 @@
+<!--
+gr4
+group 15
+
+Collaborators:
+-->
+<!DOCTYPE html>
+<html>
+<!--
+/* Copyright (c) 2017 MIT 6.813/6.831 course staff, all rights reserved.
+ * Redistribution of original or derived work requires permission of course staff.
+ */
+-->
+
+<head>
+<meta charset="utf-8">
+<title>pugs</title>
+
+<!-- Load style sheets -->
+<link rel="stylesheet" href=
+  "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.css">
+
+<link rel="stylesheet" href="mainLayout.css">
+<link rel="stylesheet" href="gr4style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Use mobile-aware viewport -->
+<meta name="viewport" content=
+  "width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Load any supplemental Javascript libraries here -->
+<script src=
+  "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src=
+  "https://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.2/seedrandom.js">
+</script>
+
+<link href="home.html">
+<link href="alert.html">
+<link href="messages.html">
+<link href="profile.html">
+<link href="selectedHobbyScreen.html">
+<link href="selectedCommunityScreen.html">
+
+<script>
+
+// By default, the first board loaded by your page will be the same 
+// each time you load (which is accomplished by "seeding" the random
+// number generator. This makes testing (and grading!) easier!
+Math.seedrandom(0);
+
+
+// A short jQuery extension to read query parameters from the URL.
+$.extend({
+  getUrlVars: function() {
+    var vars = [], pair;
+    var pairs = window.location.search.substr(1).split('&');
+    for (var i = 0; i < pairs.length; i++) {
+      pair = pairs[i].split('=');
+      vars.push(pair[0]);
+      vars[pair[0]] = pair[1] &&
+          decodeURIComponent(pair[1].replace(/\+/g, ' '));
+    }
+    return vars;
+  },
+  getUrlVar: function(name) {
+    return $.getUrlVars()[name];
+  }
+});
+
+</script>
+
+
+</head>
+
+<body>
+<style>
+</style>
+
+
+<div class="container-fluid " >
+
+  <div class="col" style="text-align: center; margin:auto;height: 500px;"id="mainColumn" >
+    <!-- Column 2 Code Here -->
+
+    <!-- Go back to previous Screen top left button-->
+    <div class="row" style="width: 420px; height: 50px;">
+      <!-- col for button-->
+      <div class="col" style="max-width: 120px; height: 50px;">
+        <a href="home.html" class="notification" style="background-color: white; width: 60px; height: 50px; position:absolute; left:10px">
+          <button class="btn" style="background-color: white; width: 60px; height: 50px; position:absolute; left:0px; top: 0;"> 
+            <i class = "fa fa-arrow-circle-o-left" style=""> 
+              <label style="max-height: 20px;"><label style="font-size: x-small;">Back</label>
+              <span class="badge"></span> 
+            </i>
+          </button>
+        </a>
+      </div>
+      <!--col for header-->
+      <div class="col" style="max-width: 190px;">
+        <h1 style="font-size: large; text-align: center; padding-top: 10px;"><b>Search Community</b></h1>
+      </div> 
+    </div> <!--End of first row-->
+  
+
+    <div class="row" style="width:420px; height: 100px; position: absolute; top: 50px;">
+      <!-- Search for Hobby Text Bar -->
+      <div class="col" style="max-width: 420px;height: 50px;">
+        <label for="searchForHobby"><b>Search For Community:</b></label>
+        <input type="text" id="searchForCommunity" placeholder="weekend hoops">
+      </div>
+    </div> <!--End of 2nd row-->
+
+    <!--Search for Hobby Text Bar-->
+    <div class="row" style="width:420px; height: 100px; position: absolute; top: 100px;">
+      <!-- Search for Hobby Text Bar -->
+      <div class="col" style="max-width: 420px;height: 50px;">
+        <h1 style="font-size: large;"> <b>Suggested Communities for You: </b></h1>
+      </div>
+    </div> <!--End of Third row-->
+
+    <!--Suggest Hobbies buttons-->
+    <div class="row" style="width:420px; height: 100px; position: absolute; top: 150px;">
+      <!-- Search for Hobby Text Bar -->
+      <div class="col" style="max-width: 100px;height: 50px;">
+        <input type="button" id="soccerFans" value="Soccer Fans" onclick="parent.location='selectedCommunityScreen.html'">
+      </div>
+    </div> <!--End of 4th row-->
+
+    <!--Most Joined Hobbies-->
+    <div class="row" style="width:420px; height: 100px; position: absolute; top: 250px;">
+      <!-- Search for Hobby Text Bar -->
+      <div class="col" style="max-width: 420px;height: 50px;">
+        <h1 style="font-size: large;"> <b>Most Joined Communities: </b></h1>
+      </div>
+    </div> <!--End of Fifth row-->
+
+    <!-- Most Joined Hobbies Buttons-->
+    <div class="row" style="width:420px; height: 100px; position: absolute; top: 300px;">
+      <!-- Search for Hobby Text Bar -->
+      <div class="col" style="max-width: 100px;height: 50px;">
+        <input type="button" id="soccerFans" value="Soccer Fans" onclick="parent.location='selectedCommunityScreen.html'">
+      </div>
+    </div> <!--End of 4th row-->
+   
+  </div>
+      
+  <!-- bottomMenu -->
+  <div class="col " style="background-color:cornflowerblue; text-align: center; margin:auto;  bottom: 0; width: 400px;height: 80px;"id="bottomMenu" >
+    <a href="home.html" class="notification">
+      
+      <i class="fa fa-home" stlye=""></i>
+      <div style="max-height: 20px;"><label style="font-size: x-small;">home</label></div>
+      <span class="badge"></span>
+
+    </a>
+
+    <a href="alerts.html" class="notification" >
+      <i class="fa fa-bell"></i>
+      <div style="max-height: 20px;"><label style="font-size: x-small;">alerts</label></div>
+      <span class="badge"></span>
+
+    </a>
+
+    <a href="messages.html" class="notification"  >
+      <i class="fa fa-comment"></i>
+      <div style="max-height: 20px;"><label style="font-size: x-small;">messages</label></div>
+      <span class="badge"></span>
+
+    </a>
+
+    <a class="notification" href="profile.html">
+      <i class="fa fa-user-circle fa-40px" ></i>
+      <div style="max-height: 20px;"><label style="font-size: x-small;">profile</label></div>
+      <span class="badge"></span>
+    </a>
+    
+
+  </div>
+</div> <!-- class="container" -->
+
+
+</body>
+
+</html>

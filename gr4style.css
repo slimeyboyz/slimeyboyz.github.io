@@ -1,0 +1,62 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  /* outline: 10px solid black; */
+  margin-top: 50px;
+}
+
+.container{
+    /* outline: 10px solid black; */
+    margin-top: 20px;
+    
+}
+
+#mainColumn {
+    outline: 10px solid black;
+    max-width: 400px;
+}
+
+#innerMainColumn {
+    display:block;
+}
+
+#bottomMenu {
+    outline: 10px solid black;
+    /* max-width: 320px; */
+}
+
+.notification {
+  background-color:cornflowerblue;
+  color: white;
+  text-decoration: none;
+  padding: 15px 26px;
+  position: relative;
+  display: inline-block;
+  border-radius: 2px;
+}
+
+
+.notification:active {
+  background:red;
+  color:red;
+}
+
+.notification .badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background-color: red;
+  color: black;
+}
+
+.homeButtons {
+    display:block;
+    width: 100%;
+    height: 15%;
+    margin-top: 15px;
+    text-align: center;
+
+    
+
+}
