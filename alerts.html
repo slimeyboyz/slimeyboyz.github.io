@@ -1,0 +1,153 @@
+<!--
+gr4
+group 15
+
+Collaborators:
+-->
+<!DOCTYPE html>
+<html>
+<!--
+/* Copyright (c) 2017 MIT 6.813/6.831 course staff, all rights reserved.
+ * Redistribution of original or derived work requires permission of course staff.
+ */
+-->
+
+<head>
+<meta charset="utf-8">
+<title>pugs alerts</title>
+
+<!-- Load style sheets -->
+<link rel="stylesheet" href=
+  "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.css">
+
+<!-- <link rel="stylesheet" href="mainLayout.css"> -->
+<link rel="stylesheet" href="gr4style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Use mobile-aware viewport -->
+<meta name="viewport" content=
+  "width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Load any supplemental Javascript libraries here -->
+<script src=
+  "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src=
+  "https://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.2/seedrandom.js">
+</script>
+
+<link href="searchForHobby.html">
+<link href="searchForCommunity.html">
+<link href="Events.html">
+<link href="home.html">
+<link href="messages.html">
+<link href="profile.html">
+
+<script>
+
+// By default, the first board loaded by your page will be the same 
+// each time you load (which is accomplished by "seeding" the random
+// number generator. This makes testing (and grading!) easier!
+Math.seedrandom(0);
+
+
+// A short jQuery extension to read query parameters from the URL.
+$.extend({
+  getUrlVars: function() {
+    var vars = [], pair;
+    var pairs = window.location.search.substr(1).split('&');
+    for (var i = 0; i < pairs.length; i++) {
+      pair = pairs[i].split('=');
+      vars.push(pair[0]);
+      vars[pair[0]] = pair[1] &&
+          decodeURIComponent(pair[1].replace(/\+/g, ' '));
+    }
+    return vars;
+  },
+  getUrlVar: function(name) {
+    return $.getUrlVars()[name];
+  }
+});
+
+</script>
+
+
+</head>
+
+<body>
+<style>
+</style>
+
+
+<div class="container-fluid " >
+  
+  <div class="col-4" style="text-align: center; margin:auto; width: 600px;height: 500px;"id="mainColumn" >
+  
+    
+
+      <div class="my-auto" style="height: 50px">
+        <a class="notification" style="display:block;background-color: white; width: 100%; height: 50px;">
+          <button class="btn" type="button" style="background-color: white; width: 60px; height: 50px; height: 50px; position:absolute; left:0" onclick="parent.location='home.html'"> 
+            <i class = "fa fa-arrow-circle-o-left" > 
+              <label style="max-height: 20px;"><label style="font-size: x-small;">Back</label>
+              <span class="badge"></span> 
+            </i>
+          </button>
+          <label style="width: 80%; text-align:20%; padding-top: 10px;" class="my-auto">Alerts Screen</label>
+          <!-- <label style="width: 100%; text-align:20%">home</label> -->
+
+        </a> 
+      </div>
+        
+      <label style="width: 100%; margin-top: 30px;">No Current Alerts to show</label>
+
+<!-- onclick="location.href='https://google.com';" -->
+    
+
+
+    <!-- Column 2 Code Here -->
+    
+
+
+
+  </div>
+
+  <!-- bottomMenu -->
+  <div class="col " style="background-color:cornflowerblue; text-align: center; margin:auto;  bottom: 0; width: 400px;height: 80px;"id="bottomMenu" >
+    <a href="home.html" class="notification">
+      
+      <i class="fa fa-home" ></i>
+      <!-- <i class="fa fa-arrow-left" stlye=""></i> -->
+      <div style="max-height: 20px;"><label style="font-size: x-small;">home</label></div>
+      <span class="badge"></span>
+
+    </a>
+
+    <a disable class="notification">
+      <i class="fa fa-bell"></i>
+      <div style="max-height: 20px;"><label style="font-size: x-small;">alerts</label></div>
+      <span class="badge"></span>
+
+    </a>
+
+    <a href="messages.html" class="notification"  >
+      <i class="fa fa-comment"></i>
+      <div style="max-height: 20px;"><label style="font-size: x-small;">messages</label></div>
+      <span class="badge"></span>
+
+    </a>
+
+    <a href="profile.html" class="notification" >
+      <i class="fa fa-user-circle" ></i>
+      <div style="max-height: 20px;"><label style="font-size: x-small;">profile</label></div>
+      <span class="badge"></span>
+    </a>
+    
+
+  </div>
+</div> <!-- class="container" -->
+
+
+</body>
+
+</html>
