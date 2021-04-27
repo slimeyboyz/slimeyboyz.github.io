@@ -87,9 +87,9 @@ $.extend({
       <!-- col for button-->
       <div class="col" style="max-width: 120px; height: 50px;">
         <a href="index.html" class="notification" style="background-color: white; width: 60px; height: 50px; position:absolute; left:10px">
-          <button class="btn" style="background-color: white; width: 60px; height: 50px; position:absolute; left:0px; top: 0;"> 
+          <button class="btn" style="background-color: white; width: 80px; height: 50px; position:absolute; left:0px; top: 10px;"> 
             <i class = "fa fa-arrow-circle-o-left" style=""> 
-              <label style="max-height: 20px;"><label style="font-size: x-small;">Back</label>
+              <label style="max-height: 20px;"><label style="font-size: medium; font-family: Arial, Helvetica, sans-serif;">Back</label>
               <span class="badge"></span> 
             </i>
           </button>
@@ -97,21 +97,21 @@ $.extend({
       </div>
       <!--col for header-->
       <div class="col" style="max-width: 190px;">
-        <h1 style="font-size: large; text-align: center; padding-top: 10px;"><b>Search for Hobby</b></h1>
+        <h1 style="font-size: large; text-align: center; padding-top: 10px; margin-top: 10px;"><b>Search for Hobby</b></h1>
       </div> 
     </div> <!--End of first row-->
   
 
     <div class="row" style="width:420px; height: 100px; position: absolute; top: 50px;">
       <!-- Search for Hobby Text Bar -->
-      <div class="col" style="max-width: 420px;height: 50px;">
+      <div class="col" style="max-width: 420px;height: 50px; position: absolute; left: -10px; margin-top: 20px;">
         <label for="searchForHobby"><b>Search For Hobby:</b></label>
         <input type="text" id="searchForHobby" placeholder="basketball">
       </div>
     </div> <!--End of 2nd row-->
 
     <!--Search for Hobby Text Bar-->
-    <div class="row" style="width:420px; height: 100px; position: absolute; top: 100px;">
+    <div class="row" style="width:420px; height: 100px; position: absolute; top: 100px; margin-top: 40px;">
       <!-- Search for Hobby Text Bar -->
       <div class="col" style="max-width: 420px;height: 50px;">
         <h1 style="font-size: large;"> <b>Suggested Hobbies for You: </b></h1>
@@ -119,15 +119,21 @@ $.extend({
     </div> <!--End of Third row-->
 
     <!--Suggest Hobbies buttons-->
-    <div class="row" style="width:420px; height: 100px; position: absolute; top: 150px;">
+    <div class="row" style="width:420px; height: 100px; position: absolute; top: 150px; margin-top: 40px;">
       <!-- Search for Hobby Text Bar -->
-      <div class="col" style="max-width: 100px;height: 50px;">
+      <div class="col" style="max-width: 100px;left:10px;height: 50px;">
         <input type="button" id="soccer" value="Soccer" onclick="parent.location='selectedHobbyScreen.html'">
+      </div>
+      <div class="col" style="max-width: 100px; left:10px; height: 50px;">
+        <input type="button" id="Baskeball" value="Basketball" disabled=true>
+      </div>
+      <div class="col" style="max-width: 100px; left:30px; height: 50px;">
+        <input type="button" id="PingPong" value="Ping Pong" disabled=true>
       </div>
     </div> <!--End of 4th row-->
 
     <!--Most Joined Hobbies-->
-    <div class="row" style="width:420px; height: 100px; position: absolute; top: 250px;">
+    <div class="row" style="width:420px; height: 100px; position: absolute; top: 250px; margin-top: 40px;">
       <!-- Search for Hobby Text Bar -->
       <div class="col" style="max-width: 420px;height: 50px;">
         <h1 style="font-size: large;"> <b>Most Joined Hobbies: </b></h1>
@@ -135,10 +141,16 @@ $.extend({
     </div> <!--End of Fifth row-->
 
     <!-- Most Joined Hobbies Buttons-->
-    <div class="row" style="width:420px; height: 100px; position: absolute; top: 300px;">
+    <div class="row" style="width:420px; height: 100px; position: absolute; top: 300px; margin-top: 40px;">
       <!-- Search for Hobby Text Bar -->
-      <div class="col" style="max-width: 100px;height: 50px;">
+      <div class="col" style="max-width: 100px;left:10px;height: 50px;">
         <input type="button" id="soccer" value="Soccer" onclick="parent.location='selectedHobbyScreen.html'">
+      </div>
+      <div class="col" style="max-width: 100px; left:8px; height: 50px;">
+        <input type="button" id="Cooking" value="Cooking" disabled=true>
+      </div>
+      <div class="col" style="max-width: 100px; left:15px; height: 50px;">
+        <input type="button" id="Video Games" value="Video Games" disabled=true>
       </div>
     </div> <!--End of 4th row-->
    
