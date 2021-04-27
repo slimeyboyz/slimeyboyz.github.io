@@ -1,0 +1,271 @@
+<!--
+gr4
+group 15
+
+Collaborators:
+-->
+<!DOCTYPE html>
+<html>
+<!--
+/* Copyright (c) 2017 MIT 6.813/6.831 course staff, all rights reserved.
+ * Redistribution of original or derived work requires permission of course staff.
+ */
+-->
+
+<head>
+<meta charset="utf-8">
+<title>pugs</title>
+
+<!-- Load style sheets -->
+<link rel="stylesheet" href=
+  "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.css">
+
+<link rel="stylesheet" href="mainLayout.css">
+<link rel="stylesheet" href="gr4style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Use mobile-aware viewport -->
+<meta name="viewport" content=
+  "width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Load any supplemental Javascript libraries here -->
+<script src=
+  "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src=
+  "https://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.2/seedrandom.js">
+</script>
+
+<link href="searchForHobby.html">
+<link href="Events.html">
+<link href="home.html">
+<link href="alerts.html">
+<link href="messages.html">
+
+
+<script>
+
+// By default, the first board loaded by your page will be the same 
+// each time you load (which is accomplished by "seeding" the random
+// number generator. This makes testing (and grading!) easier!
+Math.seedrandom(0);
+
+
+// A short jQuery extension to read query parameters from the URL.
+$.extend({
+  getUrlVars: function() {
+    var vars = [], pair;
+    var pairs = window.location.search.substr(1).split('&');
+    for (var i = 0; i < pairs.length; i++) {
+      pair = pairs[i].split('=');
+      vars.push(pair[0]);
+      vars[pair[0]] = pair[1] &&
+          decodeURIComponent(pair[1].replace(/\+/g, ' '));
+    }
+    return vars;
+  },
+  getUrlVar: function(name) {
+    return $.getUrlVars()[name];
+  }
+});
+
+//joined group, thus allow the user to create an event
+$(document).on('click','#joinGroup',function(evt)
+{
+  sessionStorage.setItem("joinedSoccerGroup","true");
+  sessionStorage.setItem("hobbyAdded","true");
+});
+
+
+</script>
+
+
+</head>
+
+<body>
+<style>
+</style>
+
+
+<div class="container-fluid " >
+
+  <div class="col" style="text-align: center; margin:auto;height: 500px;"id="mainColumn" >
+    <!-- Column 2 Code Here -->
+
+    <!-- Go back to previous Screen top left button-->
+    <div class="row" style="width: 420px; height: 50px;">
+      <!-- col for button-->
+      <div class="col" style="max-width: 120px; height: 50px;">
+        <a href="searchForHobby.html" class="notification" style="background-color: white; width: 60px; height: 50px; position:absolute; left:10px">
+          <button class="btn" style="background-color: white; width: 60px; height: 50px; position:absolute; left:0px; top: 0;"> 
+            <i class = "fa fa-arrow-circle-o-left" style=""> 
+              <label style="max-height: 20px;"><label style="font-size: x-small;">Back</label>
+              <span class="badge"></span> 
+            </i>
+          </button>
+        </a>
+      </div>
+      <!--col for header-->
+      <!-- <div class="col" style="max-width: 190px;">
+        <h1 style="font-size: large; text-align: center; padding-top: 10px;"><b>Search for Hobby</b></h1>
+      </div>  -->
+    </div> <!--End of first row-->
+  
+
+    <div class="row" style="width:420px; height: 100px; position: absolute; top: 50px;">
+      <!-- Soccer -->
+      <div class="col" style="max-width: 100px;height: 50px;">
+        <i class ="fa fa-futbol-o fa-5x">
+        </i>
+      </div>
+
+      <div class="col" style="max-width: 200px;height: 50px; position: absolute; left: 50px; top: 30px;">
+        <label style="font-size: large;" ><b>Soccer</b></label>
+      </div>
+
+      <div class="col" style="max-width: 200px;height: 50px; position: absolute; left: 200px; top: 12px;">
+        <input style="width: 150px;" type="button" id="joinGroup" value= "Join Group">
+        <input style="width: 150px;" type="button" id="leaveGroup" value= "Leave Group">
+      </div>
+
+    </div> <!--End of 2nd row-->
+
+    <!--Search for Hobby Text Bar-->
+    <div class="row" style="width:420px; height: 100px; position: absolute; top: 150px;">
+      <!-- Search for Hobby Text Bar -->
+      <div class="col" style="max-width: 420px;height: 50px; right:10px;">
+        <h1 style="font-size: large;"> <b>Description of Hobby: </b></h1>
+        <label>Soccer is really cool. Join the Group and have tons of FUN!</label>
+      </div>
+    </div> <!--End of Third row-->
+
+    <!--Friends in Soccer-->
+    <div class="row" style="width:420px; height: 100px; position: absolute; top: 300px;">
+      <!--label -->
+      <div class="col" style="max-width: 420px;height: 50px; right:10px;">
+        <h1 style="font-size: large;"> <b>Your Friends in Soccer: </b></h1>
+      </div>
+    </div> <!--End of Fifth row-->
+
+    <!-- Friends in Soccer-->
+    <div class="row" style="width:420px; height: 100px; position: absolute; right:10px; top: 350px;">
+      <!-- Friends  -->
+      <div class="col" style="max-width: 125px;height: 50px;">
+        <div class="col" style="max-width: 100px;height: 50px;">
+            <i class ="fa fa-user-circle fa-2x">
+            </i>
+          </div>
+    
+          <div class="col" style="max-width: 200px;height: 50px; position: absolute; left: 50px; top: 5px;">
+            <label style="font-size: large;" ><b>Joe</b></label>
+          </div>
+
+      </div>
+       <!-- Friends  -->
+       <div class="col" style="max-width: 125px;height: 50px;">
+        <div class="col" style="max-width: 100px;height: 50px;">
+            <i class ="fa fa-user-circle fa-2x">
+            </i>
+          </div>
+    
+          <div class="col" style="max-width: 200px;height: 50px; position: absolute; left: 50px; top: 5px;">
+            <label style="font-size: large;" ><b>John</b></label>
+          </div>
+
+      </div>
+       <!-- Friends  -->
+       <div class="col" style="max-width: 125px;height: 50px;">
+        <div class="col" style="max-width: 100px;height: 50px;">
+            <i class ="fa fa-user-circle fa-2x">
+            </i>
+          </div>
+    
+          <div class="col" style="max-width: 200px;height: 50px; position: absolute; left: 50px; top: 5px;">
+            <label style="font-size: large;" ><b>Alex</b></label>
+          </div>
+
+      </div>
+      
+    </div> <!--End of 4th row-->
+
+    <!-- Friends in Soccer-->
+    <div class="row" style="width:420px; height: 100px; position: absolute; right: 10px; top: 400px;">
+        <!-- Friends  -->
+        <div class="col" style="max-width: 125px;height: 50px;">
+          <div class="col" style="max-width: 100px;height: 50px;">
+              <i class ="fa fa-user-circle fa-2x">
+              </i>
+            </div>
+      
+            <div class="col" style="max-width: 200px;height: 50px; position: absolute; left: 50px; top: 5px;">
+              <label style="font-size: large;" ><b>Angel</b></label>
+            </div>
+  
+        </div>
+         <!-- Friends  -->
+         <div class="col" style="max-width: 125px;height: 50px;">
+          <div class="col" style="max-width: 100px;height: 50px;">
+              <i class ="fa fa-user-circle fa-2x">
+              </i>
+            </div>
+      
+            <div class="col" style="max-width: 200px;height: 50px; position: absolute; left: 50px; top: 5px;">
+              <label style="font-size: large;" ><b>Bob</b></label>
+            </div>
+  
+        </div>
+         <!-- Friends  -->
+         <div class="col" style="max-width: 125px;height: 50px;">
+          <div class="col" style="max-width: 100px;height: 50px;">
+              <i class ="fa fa-user-circle fa-2x">
+              </i>
+            </div>
+      
+            <div class="col" style="max-width: 200px;height: 50px; position: absolute; left: 50px; top: 5px;">
+              <label style="font-size: large;" ><b>Megan</b></label>
+            </div>
+  
+        </div>
+        
+      </div> <!--End of 4th row-->
+   
+  </div>
+      
+  <!-- bottomMenu -->
+  <div class="col " style="background-color:cornflowerblue; text-align: center; margin:auto;  bottom: 0; width: 400px;height: 80px;"id="bottomMenu" >
+    <a href="home.html" class="notification">
+      
+      <i class="fa fa-home" stlye=""></i>
+      <div style="max-height: 20px;"><label style="font-size: x-small;">home</label></div>
+      <span class="badge"></span>
+
+    </a>
+
+    <a href="alerts.html" class="notification" >
+      <i class="fa fa-bell"></i>
+      <div style="max-height: 20px;"><label style="font-size: x-small;">alerts</label></div>
+      <span class="badge"></span>
+
+    </a>
+
+    <a href="messages.html" class="notification"  >
+      <i class="fa fa-comment"></i>
+      <div style="max-height: 20px;"><label style="font-size: x-small;">messages</label></div>
+      <span class="badge"></span>
+
+    </a>
+
+    <a href="profile.html" class="notification">
+      <i class="fa fa-user-circle fa-40px" ></i>
+      <div style="max-height: 20px;"><label style="font-size: x-small;">profile</label></div>
+      <span class="badge"></span>
+    </a>
+    
+
+  </div>
+</div> <!-- class="container" -->
+
+
+</body>
+
+</html>
